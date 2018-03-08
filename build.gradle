@@ -26,6 +26,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        println "gradle version=$gradle.gradleVersion, homeDir=$gradle.gradleHomeDir"
     }
     buildTypes {
         release {
@@ -59,7 +61,7 @@ android {
           // set in the src/main/ directory.
           manifest.srcFile 'AndroidManifest.xml'
           
-          assets.srcDirs = ['assets']
+          assets.srcDirs 'assets'
         }
     }
 }
