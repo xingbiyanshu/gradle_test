@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+
 buildscript {
-    
     repositories {
         google()
         jcenter()
@@ -12,21 +12,9 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-    }
+    } 
 }
 
-allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
-}
-
-/*
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-*/
 
 apply plugin: 'com.android.application'
 android {
@@ -50,3 +38,4 @@ android {
 dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'  // 这行不加将会在aapt时报类似如下错：“\res\layout\activity_main.xml:0: error: attribute 'com.kedacom.gradle_test:layout_constraintBottom_toBottomOf' not found”
 }
+
