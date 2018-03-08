@@ -1,4 +1,4 @@
-package com.example.sissi.database_test;
+package com.kedacom.gradle_test;
 
 import android.app.Activity;
 import android.content.ContentValues;

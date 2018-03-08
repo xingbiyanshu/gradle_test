@@ -22,6 +22,31 @@ allprojects {
     }
 }
 
+/*
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+*/
+
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.kedacom.gradle_test"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'  // 这行不加将会在aapt时报类似如下错：“\res\layout\activity_main.xml:0: error: attribute 'com.kedacom.gradle_test:layout_constraintBottom_toBottomOf' not found”
 }

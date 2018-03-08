@@ -1,4 +1,4 @@
-package com.example.sissi.database_test;
+package com.kedacom.gradle_test;
 
 /**
  * Created by Sissi on 2/1/2018.
