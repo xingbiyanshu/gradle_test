@@ -12,7 +12,7 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-    } 
+    }
 }
 
 
@@ -70,6 +70,8 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'  // 这行不加将会在aapt时报类似如下错：“\res\layout\activity_main.xml:0: error: attribute 'com.kedacom.gradle_test:layout_constraintBottom_toBottomOf' not found”
 }
 
+
+
 //apply plugin: 'java'
 //task myConfigure(type:JavaExec){
 //    classpath = sourceSets.main.runtimeClasspath
@@ -80,3 +82,5 @@ dependencies {
 //    args 'appArg1'
 //}
 
+description = "A trivial Gradle build" // use "./gradlew properties|grep desc" can see the output
+version = "1.0" // use "./gradlew properties|grep version" can see the output
